@@ -1,0 +1,16 @@
+node_modules
+dist
+.vercel
+.next
+yarn-error.log
+.nsm
+.vscode
+.env*
+!.env.example
+.DS_Store
+lib
+*.db*
+# src/__tests__/*
+demo.ts
+.yarn
+pocketbase-downloads
