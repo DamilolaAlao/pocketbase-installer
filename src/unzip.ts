@@ -34,7 +34,7 @@ export function unzipPackage(zipPath: string, extractPath: string): void {
 export function runPocketBase(executablePath: string): void {
   try {
     console.log("Starting PocketBase server...");
-    execSync(`"${executablePath}" serve`, { stdio: "inherit" });
+    execSync(`"${executablePath}" serve --no-open`, { stdio: "inherit" });
   } catch (error) {
     console.error("Error running PocketBase:", error);
     throw error;
