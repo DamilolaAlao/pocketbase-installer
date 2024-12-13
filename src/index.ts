@@ -11,7 +11,7 @@ export interface InstallOptions {
 
 export async function installPocketBase({
   version = "0.23.5",
-  downloadDir = path.join(process.cwd(), "pocketbase-downloads"),
+  downloadDir = path.join(process.cwd(), "./"),
   githubBaseUrl = "https://github.com/pocketbase/pocketbase/releases/download",
 }: InstallOptions = {}): Promise<void> {
   try {
