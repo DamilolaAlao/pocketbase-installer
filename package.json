@@ -1,6 +1,6 @@
 {
   "name": "pocketbase-installer",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Cross-platform PocketBase installation utility",
   "main": "dist/index.js",
   "bin": {
