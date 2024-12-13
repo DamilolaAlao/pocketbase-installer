@@ -1,6 +1,6 @@
 import { execSync } from "child_process";
 import os from "os";
-import path from "path";
+import fs from "fs";
 
 export function unzipPackage(zipPath: string, extractPath: string): void {
   try {
@@ -25,6 +25,14 @@ export function unzipPackage(zipPath: string, extractPath: string): void {
     }
 
     console.log("Package extracted successfully!");
+
+    // Delete the zip file
+    try {
+      fs.unlinkSync(zipPath);
+      console.log("Cleanup: Zip file removed");
+    } catch (deleteError) {
+      console.warn("Warning: Could not delete zip file:", deleteError);
+    }
   } catch (error) {
     console.error("Error extracting package:", error);
     throw error;
